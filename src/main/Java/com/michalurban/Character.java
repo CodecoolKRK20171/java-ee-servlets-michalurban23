@@ -8,6 +8,7 @@ import java.util.Random;
 
 import static org.apache.commons.lang3.text.WordUtils.*;
 
+@SuppressWarnings("all")
 public class Character {
 
     private String name;
@@ -20,7 +21,7 @@ public class Character {
 
     public Character() {}
 
-    public void setupCharacter(Map<String, String[]> characterData) throws UnsupportedEncodingException {
+    void setupCharacter(Map<String, String[]> characterData) throws UnsupportedEncodingException {
 
         this.name = createName(characterData.get("name")[0]);
         this.race = createRace(characterData.get("race")[0]);
@@ -36,8 +37,8 @@ public class Character {
     private String createName(String name) throws UnsupportedEncodingException {
 
         int length = name.length();
-        int firstIndex = (new Random()).nextInt(length);
-        int secondIndex = (new Random()).nextInt(length);
+        int firstIndex = (new Random()).nextInt(length - 1) + 1;
+        int secondIndex = (new Random()).nextInt(length - 1) + 1;
 
         StringBuilder epicName = new StringBuilder(URLDecoder.decode(name, "UTF-8"));
         epicName.insert(firstIndex, "h").insert(secondIndex, "h").append("ex");
@@ -51,7 +52,7 @@ public class Character {
             case "ugly":
                 return "Dwarf";
             case "pretty":
-                return "Efl";
+                return "Elf";
             default:
                 return "Human";
         }
@@ -67,11 +68,10 @@ public class Character {
             case "spec":
                 return "Mage";
             default:
-                return "Cleric";
+                return "Priest";
         }
     }
 
-    @SuppressWarnings("all")
     private String createAlignment(String alignment1, String alignment2) {
 
         if (alignment1.equals(alignment2)) {
@@ -81,9 +81,18 @@ public class Character {
         }
     }
 
-    private Map<String,Integer> createStats(String stats1, String stats2, String stats3) {
+    private Map<String, Integer> createStats(String stats1, String stats2, String stats3) {
 
-        return new HashMap<>();
+        Map<String, Integer> stats = new HashMap<>();
+
+        stats.put("strength", 24 - Integer.parseInt(stats1));
+        stats.put("dexterity", 24 - Integer.parseInt(stats3));
+        stats.put("stamina", Integer.parseInt(stats3) + 2);
+        stats.put("intelligence", Integer.parseInt(stats2) + 2);
+        stats.put("wisdom", 24 - Integer.parseInt(stats2));
+        stats.put("charisma", Integer.parseInt(stats1) + 2);
+
+        return stats;
     }
 
     String getName() {
