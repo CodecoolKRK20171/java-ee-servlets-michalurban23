@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.javatutorial.tutorials</groupId>
-  <artifactId>ServletAnnotation</artifactId>
+  <artifactId>RpgCharacterCreator</artifactId>
   <version>1</version>
   <packaging>war</packaging>
   <name>ServletTest</name>
@@ -18,10 +18,15 @@
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.7</version>
+    </dependency>
   </dependencies>
 
   <build>
-    <finalName>servlettest</finalName>
+    <finalName>rpg-character-creator</finalName>
     <sourceDirectory>src/main/java</sourceDirectory>
 
     <plugins>
