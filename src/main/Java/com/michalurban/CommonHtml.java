@@ -7,8 +7,9 @@ public abstract class CommonHtml {
         return "<!DOCTYPE html>" +
                 "<html>" +
                 "<head>" +
-                "   <title>" + title + "</title>" +
+                "   <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />" +
                 "   <link rel=\"stylesheet\" href=\"styles.css\" type=\"text/css\">" +
+                "   <title>" + title + "</title>" +
                 "</head>" +
                 "<body>";
     }
@@ -18,4 +19,5 @@ public abstract class CommonHtml {
         return "</body>" +
                 "</html>";
     }
+
 }
