@@ -27,7 +27,7 @@ public class MainPage extends HttpServlet {
 
         return  "<h3>Welcome to RPG Character Creator</h3>" +
                 "<h4>On this site you can create a custom D&D character based on your preferences</h4>" +
-                "<a href=\"\\create\"><button>Creation Page</button></a>";
+                "<a href=\"/create\"><button>Creation Page</button></a>";
     }
 
 }
