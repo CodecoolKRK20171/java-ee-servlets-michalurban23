@@ -1,4 +1,4 @@
 .idea/
-WebRouter.iml
+*.iml
 src/test/
 target/
