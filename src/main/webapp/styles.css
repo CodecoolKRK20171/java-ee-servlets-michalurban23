@@ -6,3 +6,89 @@ h2 {
     color: indianred;
 }
 
+fieldset {
+    display: block;
+    padding: 5px;
+    margin: auto;
+    max-width: 50%;
+}
+
+legend {
+    color: rebeccapurple;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Verdana, Monospaced, serif;
+}
+
+div.input > input {
+    display: inline-block;
+    /*color: brown;*/
+    /*font-style: italic;*/
+    /*font-size: 0.75em;*/
+    /*font-family: "Andale Mono", Monospaced, serif;*/
+}
+
+div.input {
+    display: block;
+    margin: auto;
+    color: brown;
+    font-style: italic;
+    font-size: 0.75em;
+    font-family: "Andale Mono", Monospaced, serif;
+}
+
+div.input > label {
+    display: block;
+    padding: 10px 5px;
+    color: rebeccapurple;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Verdana, Monospaced, serif;
+}
+
+div.containerAttributes {
+
+    display: block;
+    margin: 1% auto;
+    padding: 5px 20px;
+    max-width:50%;
+    color: brown;
+    font-style: italic;
+    font-size: 1em;
+    font-family: "Andale Mono", Monospaced, serif;
+    border: 1pt solid purple;
+    border-radius: 15px;
+}
+
+div.containerStats {
+
+    display: block;
+    margin: 1% auto;
+    padding: 5px 20px;
+    max-width: 50%;
+    color: brown;
+    font-style: italic;
+    font-size: 1em;
+    font-family: "Andale Mono", Monospaced, serif;
+    border: 1pt solid purple;
+    border-radius: 15px;
+}
+
+p.name {
+    font-weight: bold;
+    font-family: Chandas, serif;
+    font-size: 0.75em;
+    display: inline-block;
+    padding: 1px 5px;
+    margin: 1px 5px;
+}
+
+p.value {
+    color: rebeccapurple;
+    font-style: italic;
+    font-family: "Comic Sans MS", serif;
+    font-size: 0.75em;
+    display: inline-block;
+    padding: 1px 5px;
+    margin: 1px 5px;
+}
